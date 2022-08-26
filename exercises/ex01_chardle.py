@@ -49,3 +49,6 @@ if word.count(char_in_word) > 1:
 if word.count(char_in_word) == 1:
     print(str(word.count(char_in_word)) + " instance of " + char_in_word + " found in " + word)
     exit()
+if word.count(char_in_word) == 0:
+    print("No instance of " + char_in_word + " found in " + word)
+    exit()
