@@ -1,6 +1,6 @@
 """EX01 - Chardle - A cute step toward wordle."""
 
-_author_ = 730619385
+_author_ = "730619385"
 
 word: str = input("Enter a 5-character word: ")
 
@@ -47,4 +47,9 @@ else:
     char_location += 1
 if word[char_location] == char_in_word:
     print(char_in_word + " found at index " + str(char_location))
-print(str(word.count(char_in_word)) + " instances of " + char_in_word)
+if word.count(char_in_word) > 1:
+    print(str(word.count(char_in_word)) + " instances of " + char_in_word + " found in " + word)
+    exit()
+if word.count(char_in_word) == 1:
+    print(str(word.count(char_in_word)) + " instance of " + char_in_word + " found in " + word)
+    exit()
